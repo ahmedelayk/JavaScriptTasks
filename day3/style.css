@@ -1,0 +1,35 @@
+body {
+  font-family:'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1 {
+  text-align: center;
+}
+.buttons {
+  /* background-color: #DDD; */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+[type="button"] {
+  padding: 7px 15px;
+  background-color: #DDD;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+[type="button"]:hover {
+  background-color: #BBB;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.image-container img {
+  max-width: 500px;
+}
