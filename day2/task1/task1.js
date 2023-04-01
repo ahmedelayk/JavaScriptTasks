@@ -1,6 +1,6 @@
 // take 3 numbers and apply + - * /
 
-var n, numArr = [], sum=0,subtraction = 0, multiplication=1,division,zeroFlag = false;
+var n, numArr = [], sum=0,subtraction , multiplication=1, division, zeroFlag = false;
 
 // take size of array from user
 do{
@@ -25,17 +25,18 @@ do{
 }while(i<n);
 
 // calculate four operation on array
+subtraction = numArr[0];
 division = numArr[0];
 for(var i=0;i<n;i++){
   sum += numArr[i];
-  subtraction -= numArr[i];
   multiplication *= numArr[i];
   if(numArr[i] === 0){
     zeroFlag = true;
     continue;
   }
   if(i == 0)
-    continue;
+  continue;
+  subtraction -= numArr[i];
   division /= numArr[i];
 }
 

@@ -6,13 +6,13 @@ var radius, num, angel, area;
 radius = takeInput(radius, 'radius');
 console.log(radius);
 area = Math.PI * Math.pow(radius, 2);
-alert(`the area of the circle is ${area}`);
+alert(`the area of the circle is ${area.toFixed(3)}`);
 
 /**************************/
 
 // // calculate square root\
 num = takeInput(num, 'number');
-alert(`square root of ${num} is ${Math.sqrt(num)}`)
+alert(`square root of ${num} is ${Math.sqrt(num).toFixed(3)}`)
 
 /**************************/
 

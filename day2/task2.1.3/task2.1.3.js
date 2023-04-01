@@ -5,3 +5,4 @@ function openPopUp(){
 
 
 
+console.log(screen.height);

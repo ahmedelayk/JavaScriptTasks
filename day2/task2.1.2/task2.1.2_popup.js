@@ -1,19 +1,14 @@
-
-
 var text = 'welcome to our demo';
 var i =0;
 
 var timer = setInterval(()=>{
-  count();
+  typing();
   i++;
 },200);
 
-function count(){
-  setTimeout(()=>{
-    console.log(text);
-    document.write(text[i-1]);
-    if(i == text.length) clearInterval(timer);
-  },150);
+function typing(){
+  document.write(text[i]);
+  if(i == text.length-1) clearInterval(timer);
 }
 
 setTimeout(()=>{
