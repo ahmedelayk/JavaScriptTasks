@@ -1,16 +1,13 @@
-// 217. Contains Duplicate
+// Display data of user
 
-var containsDuplicate = function(nums) {
-  for(let i=0;i<nums.length;i++){
-    for(let j=i+1;j<nums.length;j++){
-      if(nums[i] == nums[j])return true;
-    }
-  }
-  return false;
-};
-
-var nums = [1,2,3,4,1]
-var nums2 = [1,2,3,4,5]
-
-console.log(containsDuplicate(nums))
-console.log(containsDuplicate(nums2))
+var h3 = document.getElementById("info")
+var queryStr = location.search
+console.log(queryStr)
+var data = location.search.substring(1,queryStr.length).split('&');
+var userInfo = []
+console.log(data)
+for(var i=0;i<data.length;i++){
+  userInfo[data[i].split('=')[0]] = data[i].split('=')[1]
+}
+console.log(userInfo)
+h3.innerHTML = 'Welcome '+userInfo.userName+' your Age is '+userInfo.userAge+' your Gender is '+userInfo.gender+' and your favourite Color is '+userInfo.favColor;
