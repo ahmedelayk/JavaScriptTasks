@@ -9,6 +9,7 @@ takeInput(phoneNumber, phoneNumberReg, "phone number")
 // take mobile number from user
 var mobileNumberReg = /(010|011|012)[0-9]{8}$/ig
 takeInput(mobileNumber, mobileNumberReg, "mobile number")
+// mobileNumberReg.test(mobileNumber)
 // take email from user
 var emailReg = /\w+@[a-zA-Z]+\.[a-zA-Z]+/ig
 takeInput(email, emailReg, "email")

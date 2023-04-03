@@ -1,13 +1,16 @@
-// Display data of user
 
-var h3 = document.getElementById("info")
-var queryStr = location.search
-console.log(queryStr)
-var data = location.search.substring(1,queryStr.length).split('&');
-var userInfo = []
-console.log(data)
-for(var i=0;i<data.length;i++){
-  userInfo[data[i].split('=')[0]] = data[i].split('=')[1]
+var form = document.forms[0]
+var userNameReg = /^[a-zA-Z\s]{2,}$/ig
+var phoneNumberReg = /^[0-9]{8}$/ig
+var mobileNumberReg = /(010|011|012)[0-9]{8}$/ig
+var emailReg = /\w+@[a-zA-Z]+\.[a-zA-Z]+/ig
+
+form.onsubmit = function(event){
+  if(!(userNameReg.test(form["userName"].value) &&
+  phoneNumberReg.test(form["phoneNumber"].value) &&
+  mobileNumberReg.test(form["mobileNumber"].value) &&
+  emailReg.test(form["userEmail"].value))
+  ){
+    event.preventDefault()
+  }
 }
-console.log(userInfo)
-h3.innerHTML = 'Welcome '+userInfo.userName+' your Age is '+userInfo.userAge+' your Gender is '+userInfo.gender+' and your favourite Color is '+userInfo.favColor;
