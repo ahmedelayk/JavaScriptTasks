@@ -1,0 +1,27 @@
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  border: 1px solid #F00;
+  margin-bottom: 20px;
+}
+.container img:first-child {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container img:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container img:last-child {
+  width: 47px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
