@@ -15,12 +15,14 @@ function movePic(index, pos){
 moveBtn.onclick = function(){
   if(moveBtn.value === 'go'){
     // move of first pic
-    timer = setInterval(function(){movePic(0, 'left')}  , 5)
-    // timer = setInterval(movePic(0, 'left')  , 5)
+    // timer = setInterval(function(){movePic(0, 'left')}  , 5)
+    timer = setInterval(movePic , 5, 0, 'left')
     // move of second pic
-    timer2 = setInterval(function(){movePic(1, 'right')}  , 5)
+    // timer2 = setInterval(function(){movePic(1, 'right')}  , 5)
+    timer2 = setInterval(movePic , 5, 1, 'right')
     // move of third pic
-    timer3 = setInterval(function(){movePic(2, 'bottom')}  , 5)
+    // timer3 = setInterval(function(){movePic(2, 'bottom')}  , 5)
+    timer3 = setInterval(movePic , 5, 2, 'bottom')
     moveBtn.value = 'stop'
   }else if(moveBtn.value === 'stop'){
     clearInterval(timer)
