@@ -1,0 +1,34 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+.container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ban, .art {
+  width: 400px;
+  padding: 15px;
+  background-color: #DDD;
+  border-radius: 6px 6px 0 0;
+}
+.art {
+  border-radius: 0 0 6px 6px;
+}
+label {
+  font-size: 1.5rem;
+}
+select {
+  width: 100%;
+  border: 1px solid black;
+  font-size: 1.5rem;
+}
+
+select:focus {
+  outline: none;
+}
