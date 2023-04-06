@@ -11,8 +11,6 @@ function register(){
       break
     }
     setCookie(form.elements[i].name, form.elements[i].value, new Date())
-    // console.log(form.elements[i].name)
-    // console.log(form.elements[i].value)
   }
   for(var i=0;i<form.elements.length-1;i++){
     if(form.elements[i].value !='')
